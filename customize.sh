@@ -106,6 +106,8 @@ rm -rf $MODPATH/tools
 
 echo > $MODPATH/remove
 echo > $MODPATH/disabled
+echo > /data/adb/modules/$MODID/remove
+echo > /data/adb/modules/$MODID/disabled
 
 echo
 echo
