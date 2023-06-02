@@ -2,7 +2,7 @@ name: Build Module
 
 on:
   push:
-    branches: ['master']
+    branches: ['main']
     tags:
     - '*'
 
