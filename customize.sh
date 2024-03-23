@@ -18,6 +18,9 @@ fi
 if [ "$ARCH" = "arm" ] ; then
   # 32-bit
   wget=$MODPATH/tools/wget/armeabi-v7a/wget
+  echo 1IphwWMt2-Sf94YbbgdMsWA61mYeNrFSX>>$list
+  echo 1IphwWMt2-Sf94YbbgdMsWA61mYeNrFSX=MiX.addon.Archive-arm>>$names
+
   echo 1q_D7w9EKdgeiIWLYXQ2LtFK0nY5nbCMz>>$list
   echo 1q_D7w9EKdgeiIWLYXQ2LtFK0nY5nbCMz=MiX.addon.PDF-arm>>$names
 
@@ -26,12 +29,12 @@ if [ "$ARCH" = "arm" ] ; then
 
   echo 1Ezvagh6tO1XW4w__ghGEEQwVMBgC7C4d>>$list
   echo 1Ezvagh6tO1XW4w__ghGEEQwVMBgC7C4d=MiX.addon.Codecs-arm>>$names
-
-  echo 1IphwWMt2-Sf94YbbgdMsWA61mYeNrFSX>>$list
-  echo 1IphwWMt2-Sf94YbbgdMsWA61mYeNrFSX=MiX.addon.Archive-arm>>$names
 else
   # 64-bit
   wget=$MODPATH/tools/wget/arm64-v8a/wget
+  echo 1fxYkdFUk9rIZYmL_JtRzLMr6Kdd6VFGL>>$list
+  echo 1fxYkdFUk9rIZYmL_JtRzLMr6Kdd6VFGL=MiX.addon.Archive-arm64>>$names
+
   echo 18sETzOrcwPr_ITsrZ26_MCw3gsi1R3pH>>$list
   echo 18sETzOrcwPr_ITsrZ26_MCw3gsi1R3pH=MiX.addon.PDF-arm64>>$names
 
@@ -40,9 +43,6 @@ else
 
   echo 1x9z1HlpBGqp7MFa3KK8jH5VrGxmaQUGk>>$list
   echo 1x9z1HlpBGqp7MFa3KK8jH5VrGxmaQUGk=MiX.addon.Codecs-arm64>>$names
-
-  echo 1fxYkdFUk9rIZYmL_JtRzLMr6Kdd6VFGL>>$list
-  echo 1fxYkdFUk9rIZYmL_JtRzLMr6Kdd6VFGL=MiX.addon.Archive-arm64>>$names
 fi
 
 # common
@@ -61,10 +61,9 @@ for i in $(cat $list)
 do
   name=`grep ^$i= $names | cut -d "=" -f 2`
   echo    - $name...
-  $wget -q --no-check-certificate -O "$tmp/$name.apk" "https://docs.google.com/uc?export=download&confirm=&id=$i"
+  $wget -q --no-check-certificate -O "$tmp/$name.apk" "https://docs.google.com/uc?export=download&confirm=&id=$i&export=download&authuser=0"
+  sleep 1
 done
-
-sleep 1
 
 echo
 echo
@@ -74,16 +73,18 @@ do
   name=`grep ^$i= $names | cut -d "=" -f 2`
   echo    - $name...
   pm install --dont-kill "$tmp/$name.apk" > /dev/null 2>&1
+  sleep 1
 done
 echo    - MiX.addon.Metadata...
 pm install --dont-kill "$tmp/MiX.addon.Metadata.apk" > /dev/null 2>&1
+sleep 1
 
 echo    - MiX.addon.Signer...
 pm install --dont-kill "$tmp/MiX.addon.Signer.apk" > /dev/null 2>&1
+sleep 1
 
 echo    - MiX.addon.SMB...
 pm install --dont-kill "$tmp/MiX.addon.SMB.apk" > /dev/null 2>&1
-
 sleep 1
 
 echo
