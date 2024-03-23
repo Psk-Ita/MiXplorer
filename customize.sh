@@ -1,5 +1,8 @@
 #!/system/bin/sh
 
+## MiXplorer Sharing
+## https://drive.google.com/drive/folders/1BfeK39boriHy-9q76eXLLqbCwfV17-Gv
+
 tmp=$MODPATH/tmp
 list=$tmp/MiX-List
 names=$tmp/MiX-Names
@@ -15,31 +18,31 @@ fi
 if [ "$ARCH" = "arm" ] ; then
   # 32-bit
   wget=$MODPATH/tools/wget/armeabi-v7a/wget
-  echo 1M2am9N9ym6yB6nKz697QMnldzSMWgdK->>$list
-  echo 1M2am9N9ym6yB6nKz697QMnldzSMWgdK-=MiX.addon.PDF-arm>>$names
+  echo 1q_D7w9EKdgeiIWLYXQ2LtFK0nY5nbCMz>>$list
+  echo 1q_D7w9EKdgeiIWLYXQ2LtFK0nY5nbCMz=MiX.addon.PDF-arm>>$names
 
-  echo 1A3DpEqgQ_zXJWIcHR17-QXUwK1Tgy5hc>>$list
-  echo 1A3DpEqgQ_zXJWIcHR17-QXUwK1Tgy5hc=MiX.addon.Image-arm>>$names
+  echo 10WVQukmcWQ_x3sySVOCAU0QpDFR5KhB1>>$list
+  echo 10WVQukmcWQ_x3sySVOCAU0QpDFR5KhB1=MiX.addon.Image-arm>>$names
 
-  echo 1M1EgQca6_DR7KneUAdvCiFFs1HNz5BmB>>$list
-  echo 1M1EgQca6_DR7KneUAdvCiFFs1HNz5BmB=MiX.addon.Codecs-arm>>$names
+  echo 1Ezvagh6tO1XW4w__ghGEEQwVMBgC7C4d>>$list
+  echo 1Ezvagh6tO1XW4w__ghGEEQwVMBgC7C4d=MiX.addon.Codecs-arm>>$names
 
-  echo 1Uefuy7X1-akcdkmxckxdM1PyO2nNUB-a>>$list
-  echo 1Uefuy7X1-akcdkmxckxdM1PyO2nNUB-a=MiX.addon.Archive-arm>>$names
+  echo 1IphwWMt2-Sf94YbbgdMsWA61mYeNrFSX>>$list
+  echo 1IphwWMt2-Sf94YbbgdMsWA61mYeNrFSX=MiX.addon.Archive-arm>>$names
 else
   # 64-bit
   wget=$MODPATH/tools/wget/arm64-v8a/wget
-  echo 1bWjIUHWvyLPnJ9L3FDDg0tdJuxJoQC54>>$list
-  echo 1bWjIUHWvyLPnJ9L3FDDg0tdJuxJoQC54=MiX.addon.PDF-arm64>>$names
+  echo 18sETzOrcwPr_ITsrZ26_MCw3gsi1R3pH>>$list
+  echo 18sETzOrcwPr_ITsrZ26_MCw3gsi1R3pH=MiX.addon.PDF-arm64>>$names
 
-  echo 1htfYSPjCTCzMerfdg6jdekiQSw4K7Nhb>>$list
-  echo 1htfYSPjCTCzMerfdg6jdekiQSw4K7Nhb=MiX.addon.Image-arm64>>$names
+  echo 1P0Lj3UDFQP5_Eda_CA69NgmwmLsUqSQl>>$list
+  echo 1P0Lj3UDFQP5_Eda_CA69NgmwmLsUqSQl=MiX.addon.Image-arm64>>$names
 
-  echo 12xga5i6BKa3L_Ina_CLOvmGmbiJPs1wQ>>$list
-  echo 12xga5i6BKa3L_Ina_CLOvmGmbiJPs1wQ=MiX.addon.Codecs-arm64>>$names
+  echo 1x9z1HlpBGqp7MFa3KK8jH5VrGxmaQUGk>>$list
+  echo 1x9z1HlpBGqp7MFa3KK8jH5VrGxmaQUGk=MiX.addon.Codecs-arm64>>$names
 
-  echo 1_zPA03z1kgUlTUjuR9ACn7yX9csMiHj5>>$list
-  echo 1_zPA03z1kgUlTUjuR9ACn7yX9csMiHj5=MiX.addon.Archive-arm64>>$names
+  echo 1fxYkdFUk9rIZYmL_JtRzLMr6Kdd6VFGL>>$list
+  echo 1fxYkdFUk9rIZYmL_JtRzLMr6Kdd6VFGL=MiX.addon.Archive-arm64>>$names
 fi
 
 # common
